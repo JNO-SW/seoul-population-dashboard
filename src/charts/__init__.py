@@ -9,5 +9,4 @@ ALL_CHARTS = [
     # HeatmapChart(),    # 조원2
     # CategoryChart(),   # 조원3
     # AgeGenderChart(),  # 조원4
-    # ResidentChart(),   # 조원5
 ]
