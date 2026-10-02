@@ -7,7 +7,11 @@ import streamlit as st
 from src.charts import ALL_CHARTS
 from src.repository import PlaceRepository
 
-DATA_PATH = "data/sample.csv"  # TODO: 실제 데이터 파일로 교체
+from pathlib import Path
+
+# 수집한 실제 데이터(data/raw)가 있으면 그걸, 없으면 연습용 샘플을 쓴다.
+RAW_DIR = Path("data/raw")
+DATA_PATH = str(RAW_DIR) if any(RAW_DIR.glob("*.csv")) else "data/sample.csv"
 
 st.set_page_config(page_title="서울 인구 대시보드", layout="wide")
 

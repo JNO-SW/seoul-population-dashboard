@@ -57,6 +57,24 @@ app.py ──▶ BaseChart «추상»  render(place)
 - 작업 전에는 항상 **Pull** 먼저.
 - 혼잡도 색상은 `base.py`의 `CONGESTION_COLORS`를 사용합니다.
 
+## 데이터 수집 (자동)
+
+서울시 실시간 인구데이터 API는 현재 값만 제공하므로, GitHub Actions로 **1시간마다 자동 수집**해서 기간 데이터를 쌓습니다.
+
+- 수집 코드: `collector/collect.py`
+- 자동 실행 설정: `.github/workflows/collect.yml` (매시 7분)
+- 저장 위치: **`data` 브랜치**의 `data/raw/YYYY-MM-DD.csv` (한국 시간 기준 날짜별 파일)
+- 장소 목록: `data/places.xlsx` (열린데이터광장 "서울시 주요 121장소 목록") — 장소 분류(관광특구, 공원 등)도 여기서 가져옵니다.
+
+수집된 데이터를 내 컴퓨터로 가져오려면 저장소 폴더에서:
+
+```bash
+git fetch origin data
+git checkout origin/data -- data/raw
+```
+
+`data/raw`에 CSV가 있으면 대시보드가 자동으로 실제 데이터를 사용하고, 없으면 `data/sample.csv`(가짜 연습 데이터)를 사용합니다.
+
 ## 사용 데이터
 
 - 서울시 실시간 인구데이터 (서울 열린데이터광장 OA-21778)
