@@ -36,22 +36,39 @@ jobs:
       - name: 라이브러리 설치
         run: pip install requests pandas openpyxl
 
-      - name: 수집
+      - name: 수집 (인구데이터)
+        id: ppltn
+        continue-on-error: true
         env:
           SEOUL_API_KEY: ${{ secrets.SEOUL_API_KEY }}
           RAW_DIR: databranch/data/raw
         run: python collector/collect.py
+
+      - name: 수집 (도시데이터 요약)
+        id: city
+        continue-on-error: true
+        env:
+          SEOUL_CITYDATA_KEY: ${{ secrets.SEOUL_CITYDATA_KEY }}
+          CITY_RAW_DIR: databranch/data/raw_city
+          SAMPLE_DIR: databranch/data/samples
+        run: python collector/collect_city.py
 
       - name: 저장
         working-directory: databranch
         run: |
           git config user.name "JNO-SW"
           git config user.email "ljh030815@gmail.com"
-          git add data/raw
+          git add data
           if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
           git commit -m "데이터 수집 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
           for i in 1 2 3; do
             git pull --rebase origin data && git push origin HEAD:data && exit 0
             sleep 5
           done
+          exit 1
+
+      - name: 결과 확인
+        if: steps.ppltn.outcome == 'failure' || steps.city.outcome == 'failure'
+        run: |
+          echo "인구데이터: ${{ steps.ppltn.outcome }} / 도시데이터: ${{ steps.city.outcome }}"
           exit 1

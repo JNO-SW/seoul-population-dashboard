@@ -61,9 +61,9 @@ app.py ──▶ BaseChart «추상»  render(place)
 
 서울시 실시간 인구데이터 API는 현재 값만 제공하므로, GitHub Actions로 **1시간마다 자동 수집**해서 기간 데이터를 쌓습니다.
 
-- 수집 코드: `collector/collect.py`
+- 수집 코드: `collector/collect.py` (인구데이터), `collector/collect_city.py` (도시데이터 요약: 도로소통·주차장·지하철·버스·문화행사·사고통제)
 - 자동 실행 설정: `.github/workflows/collect.yml` (매시 7분)
-- 저장 위치: **`data` 브랜치**의 `data/raw/YYYY-MM-DD.csv` (한국 시간 기준 날짜별 파일)
+- 저장 위치: **`data` 브랜치**의 `data/raw/` (인구), `data/raw_city/` (도시데이터 요약), 한국 시간 기준 날짜별 CSV
 - 장소 목록: `data/places.xlsx` (열린데이터광장 "서울시 주요 121장소 목록") — 장소 분류(관광특구, 공원 등)도 여기서 가져옵니다.
 
 수집된 데이터를 내 컴퓨터로 가져오려면 저장소 폴더에서:
@@ -78,3 +78,4 @@ git checkout origin/data -- data/raw
 ## 사용 데이터
 
 - 서울시 실시간 인구데이터 (서울 열린데이터광장 OA-21778)
+- 서울시 실시간 도시데이터 (서울 열린데이터광장 OA-21285)
