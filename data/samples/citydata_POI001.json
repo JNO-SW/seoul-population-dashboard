@@ -1,0 +1,2169 @@
+{
+ "AREA_NM": "강남 MICE 관광특구",
+ "AREA_CD": "POI001",
+ "LIVE_PPLTN_STTS": [
+  {
+   "AREA_NM": "강남 MICE 관광특구",
+   "AREA_CD": "POI001",
+   "AREA_CONGEST_LVL": "약간 붐빔",
+   "AREA_CONGEST_MSG": "사람들이 몰려있을 가능성이 크고 붐빈다고 느낄 수 있어요. 인구밀도가 높은 구간에서는 도보 이동시 부딪힘이 발생할 수 있어요.",
+   "AREA_PPLTN_MIN": "20000",
+   "AREA_PPLTN_MAX": "22000",
+   "MALE_PPLTN_RATE": "49.1",
+   "FEMALE_PPLTN_RATE": "50.9",
+   "PPLTN_RATE_0": "0.6",
+   "PPLTN_RATE_10": "3.8",
+   "PPLTN_RATE_20": "21.3",
+   "PPLTN_RATE_30": "26.9",
+   "PPLTN_RATE_40": "22.3",
+   "PPLTN_RATE_50": "15.1",
+   "PPLTN_RATE_60": "6.5",
+   "PPLTN_RATE_70": "3.6",
+   "RESNT_PPLTN_RATE": "42.6",
+   "NON_RESNT_PPLTN_RATE": "57.4",
+   "REPLACE_YN": "N",
+   "PPLTN_TIME": "2026-10-02 15:55",
+   "FCST_YN": "Y",
+   "FCST_PPLTN": [
+    {
+     "FCST_TIME": "2026-10-02 17:00",
+     "FCST_CONGEST_LVL": "약간 붐빔",
+     "FCST_PPLTN_MIN": "20000",
+     "FCST_PPLTN_MAX": "22000"
+    },
+    {
+     "FCST_TIME": "2026-10-02 18:00",
+     "FCST_CONGEST_LVL": "보통",
+     "FCST_PPLTN_MIN": "18000",
+     "FCST_PPLTN_MAX": "20000"
+    },
+    {
+     "FCST_TIME": "2026-10-02 19:00",
+     "FCST_CONGEST_LVL": "보통",
+     "FCST_PPLTN_MIN": "14000",
+     "FCST_PPLTN_MAX": "16000"
+    },
+    {
+     "FCST_TIME": "2026-10-02 20:00",
+     "FCST_CONGEST_LVL": "여유",
+     "FCST_PPLTN_MIN": "12000",
+     "FCST_PPLTN_MAX": "14000"
+    },
+    {
+     "FCST_TIME": "2026-10-02 21:00",
+     "FCST_CONGEST_LVL": "여유",
+     "FCST_PPLTN_MIN": "9500",
+     "FCST_PPLTN_MAX": "10000"
+    },
+    {
+     "FCST_TIME": "2026-10-02 22:00",
+     "FCST_CONGEST_LVL": "여유",
+     "FCST_PPLTN_MIN": "7000",
+     "FCST_PPLTN_MAX": "7500"
+    },
+    {
+     "FCST_TIME": "2026-10-02 23:00",
+     "FCST_CONGEST_LVL": "여유",
+     "FCST_PPLTN_MIN": "5000",
+     "FCST_PPLTN_MAX": "5500"
+    },
+    {
+     "FCST_TIME": "2026-10-03 00:00",
+     "FCST_CONGEST_LVL": "여유",
+     "FCST_PPLTN_MIN": "3500",
+     "FCST_PPLTN_MAX": "4000"
+    },
+    {
+     "FCST_TIME": "2026-10-03 01:00",
+     "FCST_CONGEST_LVL": "여유",
+     "FCST_PPLTN_MIN": "3000",
+     "FCST_PPLTN_MAX": "3500"
+    },
+    {
+     "FCST_TIME": "2026-10-03 02:00",
+     "FCST_CONGEST_LVL": "여유",
+     "FCST_PPLTN_MIN": "2500",
+     "FCST_PPLTN_MAX": "3000"
+    },
+    {
+     "FCST_TIME": "2026-10-03 03:00",
+     "FCST_CONGEST_LVL": "여유",
+     "FCST_PPLTN_MIN": "2500",
+     "FCST_PPLTN_MAX": "3000"
+    },
+    {
+     "FCST_TIME": "2026-10-03 04:00",
+     "FCST_CONGEST_LVL": "여유",
+     "FCST_PPLTN_MIN": "2000",
+     "FCST_PPLTN_MAX": "2500"
+    }
+   ]
+  }
+ ],
+ "ROAD_TRAFFIC_STTS": {
+  "AVG_ROAD_DATA": {
+   "ROAD_MSG": "해당 장소로 이동·진입시 시간이 오래 걸릴 수 있어요.",
+   "ROAD_TRAFFIC_IDX": "정체",
+   "ROAD_TRAFFIC_SPD": 13,
+   "ROAD_TRAFFIC_TIME": "2026-10-02 16:25"
+  },
+  "ROAD_TRAFFIC_STTS": [
+   {
+    "LINK_ID": "1220003104",
+    "ROAD_NM": "영동대로",
+    "START_ND_CD": "1220038604",
+    "START_ND_NM": "사조빌딩",
+    "START_ND_XY": "127.0637824235113698_37.5075784064484665",
+    "END_ND_CD": "1220040303",
+    "END_ND_NM": "삼성역사거리",
+    "END_ND_XY": "127.0631184701287282_37.5088181934601863",
+    "DIST": "150.0",
+    "SPD": 20.0,
+    "IDX": "서행",
+    "XYLIST": "127.0631184701287282_37.5088181934601863|127.0637824235113698_37.5075784064484665"
+   },
+   {
+    "LINK_ID": "1220003204",
+    "ROAD_NM": "영동대로",
+    "START_ND_CD": "1220040302",
+    "START_ND_NM": "삼성역사거리",
+    "START_ND_XY": "127.0632451463058885_37.5088571864380711",
+    "END_ND_CD": "1220038601",
+    "END_ND_NM": "사조빌딩",
+    "END_ND_XY": "127.0639078316108197_37.5076197633601041",
+    "DIST": "149.0",
+    "SPD": 4.0,
+    "IDX": "정체",
+    "XYLIST": "127.0639078316108197_37.5076197633601041|127.0632451463058885_37.5088571864380711"
+   },
+   {
+    "LINK_ID": "1220003303",
+    "ROAD_NM": "영동대로",
+    "START_ND_CD": "1220042504",
+    "START_ND_NM": "속성변화점",
+    "START_ND_XY": "127.0608476713455985_37.5130456722428676",
+    "END_ND_CD": "1220043808",
+    "END_ND_NM": "코엑스앞교차로",
+    "END_ND_XY": "127.0601919456584454_37.5142029024356347",
+    "DIST": "141.0",
+    "SPD": 10.0,
+    "IDX": "정체",
+    "XYLIST": "127.0601919456584454_37.5142029024356347|127.0603995070934218_37.5138375440934411|127.0607938946184277_37.5131433157650775|127.0608476713455985_37.5130456722428676"
+   },
+   {
+    "LINK_ID": "1220003402",
+    "ROAD_NM": "영동대로",
+    "START_ND_CD": "1220434100",
+    "START_ND_NM": "삼성동 111-8",
+    "START_ND_XY": "127.0623503477867757_37.5105231713021467",
+    "END_ND_CD": "1220040301",
+    "END_ND_NM": "삼성역사거리",
+    "END_ND_XY": "127.0631917873569989_37.5089566792768281",
+    "DIST": "189.0",
+    "SPD": 6.0,
+    "IDX": "정체",
+    "XYLIST": "127.0631917873569989_37.5089566792768281|127.0623503477867757_37.5105231713021467"
+   },
+   {
+    "LINK_ID": "1220003403",
+    "ROAD_NM": "영동대로",
+    "START_ND_CD": "1220043807",
+    "START_ND_NM": "코엑스앞교차로",
+    "START_ND_XY": "127.0603272282434091_37.5142270211862794",
+    "END_ND_CD": "1220042502",
+    "END_ND_NM": "아셈타워",
+    "END_ND_XY": "127.0609175537963154_37.5131878914081796",
+    "DIST": "127.0",
+    "SPD": 5.0,
+    "IDX": "정체",
+    "XYLIST": "127.0609175537963154_37.5131878914081796|127.0605231671833053_37.5138821201433714|127.0603272282434091_37.5142270211862794"
+   },
+   {
+    "LINK_ID": "1220004001",
+    "ROAD_NM": "영동대로",
+    "START_ND_CD": "1220043809",
+    "START_ND_NM": "코엑스앞교차로",
+    "START_ND_XY": "127.0601375029284839_37.5143038844831338",
+    "END_ND_CD": "1220044403",
+    "END_ND_NM": "봉은사역(서울9호선)",
+    "END_ND_XY": "127.0598624891181174_37.5148335177271051",
+    "DIST": "64.0",
+    "SPD": 7.0,
+    "IDX": "정체",
+    "XYLIST": "127.0598624891181174_37.5148335177271051|127.0601375029284839_37.5143038844831338"
+   },
+   {
+    "LINK_ID": "1220004101",
+    "ROAD_NM": "영동대로",
+    "START_ND_CD": "1220044402",
+    "START_ND_NM": "봉은사역(서울9호선)",
+    "START_ND_XY": "127.0599879180035288_37.5148748429464263",
+    "END_ND_CD": "1220043806",
+    "END_ND_NM": "코엑스앞교차로",
+    "END_ND_XY": "127.0602718568028990_37.5143280204466052",
+    "DIST": "66.0",
+    "SPD": 33.0,
+    "IDX": "원활",
+    "XYLIST": "127.0602718568028990_37.5143280204466052|127.0599879180035288_37.5148748429464263"
+   },
+   {
+    "LINK_ID": "1220028002",
+    "ROAD_NM": "테헤란로",
+    "START_ND_CD": "1220038701",
+    "START_ND_NM": "삼성동 172-66",
+    "START_ND_XY": "127.0594740418968343_37.5078073048774883",
+    "END_ND_CD": "1220039504",
+    "END_ND_NM": "슈페리어사옥",
+    "END_ND_XY": "127.0619066150805594_37.5085594791171530",
+    "DIST": "231.0",
+    "SPD": 14.0,
+    "IDX": "정체",
+    "XYLIST": "127.0619066150805594_37.5085594791171530|127.0594740418968343_37.5078073048774883"
+   },
+   {
+    "LINK_ID": "1220028003",
+    "ROAD_NM": "테헤란로",
+    "START_ND_CD": "1220039501",
+    "START_ND_NM": "슈페리어사옥",
+    "START_ND_XY": "127.0620331846530320_37.5085986138393324",
+    "END_ND_CD": "1220040304",
+    "END_ND_NM": "삼성역사거리",
+    "END_ND_XY": "127.0630651113215919_37.5089176743260495",
+    "DIST": "98.0",
+    "SPD": 21.0,
+    "IDX": "서행",
+    "XYLIST": "127.0630651113215919_37.5089176743260495|127.0620331846530320_37.5085986138393324"
+   },
+   {
+    "LINK_ID": "1220028103",
+    "ROAD_NM": "테헤란로",
+    "START_ND_CD": "1220040303",
+    "START_ND_NM": "삼성역사거리",
+    "START_ND_XY": "127.0631184701287282_37.5088181934601863",
+    "END_ND_CD": "1220039502",
+    "END_ND_NM": "슈페리어사옥",
+    "END_ND_XY": "127.0620822932532974_37.5084978197410663",
+    "DIST": "98.0",
+    "SPD": 5.0,
+    "IDX": "정체",
+    "XYLIST": "127.0620822932532974_37.5084978197410663|127.0631184701287282_37.5088181934601863"
+   },
+   {
+    "LINK_ID": "1220028803",
+    "ROAD_NM": "테헤란로",
+    "START_ND_CD": "1220040301",
+    "START_ND_NM": "삼성역사거리",
+    "START_ND_XY": "127.0631917873569989_37.5089566792768281",
+    "END_ND_CD": "1220041404",
+    "END_ND_NM": "서울강남경찰서교차로",
+    "END_ND_XY": "127.0663791845268378_37.5099251428739393",
+    "DIST": "302.0",
+    "SPD": 8.0,
+    "IDX": "정체",
+    "XYLIST": "127.0663791845268378_37.5099251428739393|127.0647076757638558_37.5094210528302128|127.0645797580656193_37.5093821330006207|127.0631917873569989_37.5089566792768281"
+   },
+   {
+    "LINK_ID": "1220028902",
+    "ROAD_NM": "테헤란로",
+    "START_ND_CD": "1220040803",
+    "START_ND_NM": "대치동 1011",
+    "START_ND_XY": "127.0646284979941214_37.5092812253236190",
+    "END_ND_CD": "1220040302",
+    "END_ND_NM": "삼성역사거리",
+    "END_ND_XY": "127.0632451463058885_37.5088571864380711",
+    "DIST": "131.0",
+    "SPD": 18.0,
+    "IDX": "서행",
+    "XYLIST": "127.0632451463058885_37.5088571864380711|127.0646284979941214_37.5092812253236190"
+   },
+   {
+    "LINK_ID": "1220030802",
+    "ROAD_NM": "봉은사로",
+    "START_ND_CD": "1220306300",
+    "START_ND_NM": "삼성동 111-86",
+    "START_ND_XY": "127.0595673491428670_37.5141997365039970",
+    "END_ND_CD": "1220043809",
+    "END_ND_NM": "코엑스앞교차로",
+    "END_ND_XY": "127.0601375029284839_37.5143038844831338",
+    "DIST": "52.0",
+    "SPD": 12.5,
+    "IDX": "정체",
+    "XYLIST": "127.0601375029284839_37.5143038844831338|127.0595673491428670_37.5141997365039970"
+   },
+   {
+    "LINK_ID": "1220031404",
+    "ROAD_NM": "봉은사로",
+    "START_ND_CD": "1220043806",
+    "START_ND_NM": "코엑스앞교차로",
+    "START_ND_XY": "127.0602718568028990_37.5143280204466052",
+    "END_ND_CD": "1220043805",
+    "END_ND_NM": "삼성1동주민센터",
+    "END_ND_XY": "127.0617426909060157_37.5145859851302461",
+    "DIST": "133.0",
+    "SPD": 11.0,
+    "IDX": "정체",
+    "XYLIST": "127.0617426909060157_37.5145859851302461|127.0612478602413944_37.5144992006761413|127.0602718568028990_37.5143280204466052"
+   },
+   {
+    "LINK_ID": "1220031503",
+    "ROAD_NM": "봉은사로",
+    "START_ND_CD": "1220304600",
+    "START_ND_NM": "삼성동 172",
+    "START_ND_XY": "127.0612770466940020_37.5143936087352401",
+    "END_ND_CD": "1220043807",
+    "END_ND_NM": "코엑스앞교차로",
+    "END_ND_XY": "127.0603272282434091_37.5142270211862794",
+    "DIST": "86.0",
+    "SPD": 21.0,
+    "IDX": "서행",
+    "XYLIST": "127.0603272282434091_37.5142270211862794|127.0612770466940020_37.5143936087352401"
+   }
+  ]
+ },
+ "PRK_STTS": [
+  {
+   "PRK_NM": "코엑스 주차장",
+   "PRK_CD": "1426397",
+   "PRK_TYPE": "BS",
+   "CPCTY": "2648",
+   "CUR_PRK_CNT": "",
+   "CUR_PRK_TIME": "",
+   "CUR_PRK_YN": "N",
+   "PAY_YN": "Y",
+   "RATES": "2400",
+   "TIME_RATES": "30",
+   "ADD_RATES": "1200",
+   "ADD_TIME_RATES": "15",
+   "ADDRESS": "강남구 삼성동 159-0",
+   "ROAD_ADDR": "",
+   "LNG": "127.05884715",
+   "LAT": "37.51243164"
+  },
+  {
+   "PRK_NM": "그랜드파르나스호텔",
+   "PRK_CD": "3199034",
+   "PRK_TYPE": "BS",
+   "CPCTY": "1186",
+   "CUR_PRK_CNT": "",
+   "CUR_PRK_TIME": "",
+   "CUR_PRK_YN": "N",
+   "PAY_YN": "Y",
+   "RATES": "9000",
+   "TIME_RATES": "60",
+   "ADD_RATES": "9000",
+   "ADD_TIME_RATES": "60",
+   "ADDRESS": "강남구 삼성동 159-8",
+   "ROAD_ADDR": "",
+   "LNG": "127.060844",
+   "LAT": "37.509079"
+  },
+  {
+   "PRK_NM": "현대백화점 무역점",
+   "PRK_CD": "764383",
+   "PRK_TYPE": "BS",
+   "CPCTY": "594",
+   "CUR_PRK_CNT": "",
+   "CUR_PRK_TIME": "",
+   "CUR_PRK_YN": "N",
+   "PAY_YN": "Y",
+   "RATES": "1000",
+   "TIME_RATES": "10",
+   "ADD_RATES": "1000",
+   "ADD_TIME_RATES": "10",
+   "ADDRESS": "강남구 삼성동 159-7",
+   "ROAD_ADDR": "",
+   "LNG": "127.05973996",
+   "LAT": "37.50861623"
+  }
+ ],
+ "SUB_STTS": [
+  {
+   "SUB_STN_NM": "삼성",
+   "SUB_STN_LINE": "2",
+   "SUB_STN_RADDR": "서울특별시 강남구 테헤란로 지하538(삼성동)",
+   "SUB_STN_JIBUN": null,
+   "SUB_STN_X": "127.06316",
+   "SUB_STN_Y": "37.508844",
+   "SUB_DETAIL": [
+    {
+     "SUB_NT_STN": "1002000218",
+     "SUB_BF_STN": "1002000220",
+     "SUB_ROUTE_NM": "성수행 - 종합운동장방면",
+     "SUB_LINE": "2호선",
+     "SUB_ORD": "01003성수0",
+     "SUB_DIR": "외선",
+     "SUB_TERMINAL": "성수",
+     "SUB_ARVTIME": "180",
+     "SUB_ARMG1": "3분 후",
+     "SUB_ARMG2": "역삼",
+     "SUB_ARVINFO": "운행중"
+    },
+    {
+     "SUB_NT_STN": "1002000218",
+     "SUB_BF_STN": "1002000220",
+     "SUB_ROUTE_NM": "성수행 - 종합운동장방면",
+     "SUB_LINE": "2호선",
+     "SUB_ORD": "02006성수0",
+     "SUB_DIR": "외선",
+     "SUB_TERMINAL": "성수",
+     "SUB_ARVTIME": "400",
+     "SUB_ARMG1": "6분 40초 후",
+     "SUB_ARMG2": "서초",
+     "SUB_ARVINFO": "운행중"
+    },
+    {
+     "SUB_NT_STN": "1002000220",
+     "SUB_BF_STN": "1002000218",
+     "SUB_ROUTE_NM": "성수행 - 선릉방면",
+     "SUB_LINE": "2호선",
+     "SUB_ORD": "11001성수0",
+     "SUB_DIR": "내선",
+     "SUB_TERMINAL": "성수",
+     "SUB_ARVTIME": "90",
+     "SUB_ARMG1": "전역 도착",
+     "SUB_ARMG2": "종합운동장",
+     "SUB_ARVINFO": "전역도착"
+    },
+    {
+     "SUB_NT_STN": "1002000220",
+     "SUB_BF_STN": "1002000218",
+     "SUB_ROUTE_NM": "성수행 - 선릉방면",
+     "SUB_LINE": "2호선",
+     "SUB_ORD": "12003성수0",
+     "SUB_DIR": "내선",
+     "SUB_TERMINAL": "성수",
+     "SUB_ARVTIME": "270",
+     "SUB_ARMG1": "4분 30초 후",
+     "SUB_ARMG2": "잠실",
+     "SUB_ARVINFO": "운행중"
+    }
+   ],
+   "SUB_FACIINFO": []
+  },
+  {
+   "SUB_STN_NM": "봉은사",
+   "SUB_STN_LINE": "9",
+   "SUB_STN_RADDR": "서울특별시 강남구 봉은사로 601",
+   "SUB_STN_JIBUN": null,
+   "SUB_STN_X": "127.060245",
+   "SUB_STN_Y": "37.514219",
+   "SUB_DETAIL": [
+    {
+     "SUB_NT_STN": "1009000928",
+     "SUB_BF_STN": "1009000930",
+     "SUB_ROUTE_NM": "김포공항행 - 삼성중앙방면 (급행)",
+     "SUB_LINE": "9호선",
+     "SUB_ORD": "01004김포공항1",
+     "SUB_DIR": "하행",
+     "SUB_TERMINAL": "김포공항",
+     "SUB_ARVTIME": "425",
+     "SUB_ARMG1": "7분 5초 후 (석촌)",
+     "SUB_ARMG2": "석촌",
+     "SUB_ARVINFO": "운행중"
+    },
+    {
+     "SUB_NT_STN": "1009000928",
+     "SUB_BF_STN": "1009000930",
+     "SUB_ROUTE_NM": "개화행 - 삼성중앙방면",
+     "SUB_LINE": "9호선",
+     "SUB_ORD": "02005개화0",
+     "SUB_DIR": "하행",
+     "SUB_TERMINAL": "개화",
+     "SUB_ARVTIME": "645",
+     "SUB_ARMG1": "10분 45초 후 (송파나루)",
+     "SUB_ARMG2": "송파나루",
+     "SUB_ARVINFO": "운행중"
+    },
+    {
+     "SUB_NT_STN": "1009000930",
+     "SUB_BF_STN": "1009000928",
+     "SUB_ROUTE_NM": "중앙보훈병원행 - 종합운동장방면",
+     "SUB_LINE": "9호선",
+     "SUB_ORD": "11001중앙보훈병원0",
+     "SUB_DIR": "상행",
+     "SUB_TERMINAL": "중앙보훈병원",
+     "SUB_ARVTIME": "95",
+     "SUB_ARMG1": "전역 도착",
+     "SUB_ARMG2": "삼성중앙",
+     "SUB_ARVINFO": "전역도착"
+    },
+    {
+     "SUB_NT_STN": "1009000930",
+     "SUB_BF_STN": "1009000928",
+     "SUB_ROUTE_NM": "중앙보훈병원행 - 종합운동장방면 (급행)",
+     "SUB_LINE": "9호선",
+     "SUB_ORD": "12005중앙보훈병원1",
+     "SUB_DIR": "상행",
+     "SUB_TERMINAL": "중앙보훈병원",
+     "SUB_ARVTIME": "495",
+     "SUB_ARMG1": "8분 15초 후 (사평)",
+     "SUB_ARMG2": "사평",
+     "SUB_ARVINFO": "운행중"
+    }
+   ],
+   "SUB_FACIINFO": []
+  }
+ ],
+ "LIVE_SUB_PPLTN": {
+  "SUB_ACML_GTON_PPLTN_MIN": "24500",
+  "SUB_ACML_GTON_PPLTN_MAX": "24600",
+  "SUB_ACML_GTOFF_PPLTN_MIN": "67400",
+  "SUB_ACML_GTOFF_PPLTN_MAX": "67500",
+  "SUB_30WTHN_GTON_PPLTN_MIN": "3100",
+  "SUB_30WTHN_GTON_PPLTN_MAX": "3200",
+  "SUB_30WTHN_GTOFF_PPLTN_MIN": "1500",
+  "SUB_30WTHN_GTOFF_PPLTN_MAX": "1600",
+  "SUB_10WTHN_GTON_PPLTN_MIN": "950",
+  "SUB_10WTHN_GTON_PPLTN_MAX": "1000",
+  "SUB_10WTHN_GTOFF_PPLTN_MIN": "500",
+  "SUB_10WTHN_GTOFF_PPLTN_MAX": "550",
+  "SUB_5WTHN_GTON_PPLTN_MIN": "600",
+  "SUB_5WTHN_GTON_PPLTN_MAX": "650",
+  "SUB_5WTHN_GTOFF_PPLTN_MIN": "350",
+  "SUB_5WTHN_GTOFF_PPLTN_MAX": "400",
+  "SUB_STN_CNT": "2",
+  "SUB_STN_TIME": "20261002"
+ },
+ "BUS_STN_STTS": [
+  {
+   "BUS_RESULT_MSG": "정상 호출되었습니다.",
+   "BUS_STN_ID": "122000095",
+   "BUS_ARS_ID": "23198",
+   "BUS_STN_NM": "무역센터",
+   "BUS_STN_X": "127.0610582829",
+   "BUS_STN_Y": "37.512027938"
+  },
+  {
+   "BUS_RESULT_MSG": "정상 호출되었습니다.",
+   "BUS_STN_ID": "122000096",
+   "BUS_ARS_ID": "23199",
+   "BUS_STN_NM": "무역센터",
+   "BUS_STN_X": "127.0619901081",
+   "BUS_STN_Y": "37.5103013849"
+  },
+  {
+   "BUS_RESULT_MSG": "정상 호출되었습니다.",
+   "BUS_STN_ID": "122000098",
+   "BUS_ARS_ID": "23201",
+   "BUS_STN_NM": "한국무역센터.삼성역",
+   "BUS_STN_X": "127.060899",
+   "BUS_STN_Y": "37.508448"
+  },
+  {
+   "BUS_RESULT_MSG": "정상 호출되었습니다.",
+   "BUS_STN_ID": "122000597",
+   "BUS_ARS_ID": "23804",
+   "BUS_STN_NM": "삼성역.그랜드인터컨티넨탈",
+   "BUS_STN_X": "127.060905",
+   "BUS_STN_Y": "37.508435"
+  },
+  {
+   "BUS_RESULT_MSG": "정상 호출되었습니다.",
+   "BUS_STN_ID": "122900015",
+   "BUS_ARS_ID": "23818",
+   "BUS_STN_NM": "코엑스동문",
+   "BUS_STN_X": "127.0608775706",
+   "BUS_STN_Y": "37.5122075875"
+  }
+ ],
+ "LIVE_BUS_PPLTN": {
+  "BUS_ACML_GTON_PPLTN_MIN": "2300",
+  "BUS_ACML_GTON_PPLTN_MAX": "2400",
+  "BUS_ACML_GTOFF_PPLTN_MIN": "3600",
+  "BUS_ACML_GTOFF_PPLTN_MAX": "3700",
+  "BUS_30WTHN_GTON_PPLTN_MIN": "200",
+  "BUS_30WTHN_GTON_PPLTN_MAX": "250",
+  "BUS_30WTHN_GTOFF_PPLTN_MIN": "100",
+  "BUS_30WTHN_GTOFF_PPLTN_MAX": "150",
+  "BUS_10WTHN_GTON_PPLTN_MIN": "50",
+  "BUS_10WTHN_GTON_PPLTN_MAX": "60",
+  "BUS_10WTHN_GTOFF_PPLTN_MIN": "40",
+  "BUS_10WTHN_GTOFF_PPLTN_MAX": "50",
+  "BUS_5WTHN_GTON_PPLTN_MIN": "10",
+  "BUS_5WTHN_GTON_PPLTN_MAX": "20",
+  "BUS_5WTHN_GTOFF_PPLTN_MIN": "10",
+  "BUS_5WTHN_GTOFF_PPLTN_MAX": "20",
+  "BUS_STN_CNT": "6",
+  "BUS_STN_TIME": "20261002"
+ },
+ "ACDNT_CNTRL_STTS": [],
+ "SBIKE_STTS": [],
+ "WEATHER_STTS": [
+  {
+   "WEATHER_TIME": "2026-10-02 16:20",
+   "TEMP": "22.2",
+   "MAX_TEMP": "22.0",
+   "MIN_TEMP": "12.0",
+   "HUMIDITY": "23",
+   "WIND_DIRCT": "NNE",
+   "WIND_SPD": "2.1",
+   "PRECIPITATION": "-",
+   "PRECPT_TYPE": "없음",
+   "PCP_MSG": "비 또는 눈 소식이 없어요.",
+   "SUNRISE": "06:28",
+   "SUNSET": "18:14",
+   "UV_INDEX_LVL": "보통",
+   "UV_INDEX": "3",
+   "UV_MSG": "2-3시간 햇볕에 노출 시 피부 화상을 입을 수 있어요.외출시 모자나 선글라스를 착용해주세요.자외선 차단제를 발라주세요.",
+   "PM25_INDEX": "좋음",
+   "PM25": "1",
+   "PM10_INDEX": "좋음",
+   "PM10": "16",
+   "AIR_IDX": "보통",
+   "AIR_IDX_MVL": "61.0",
+   "AIR_IDX_MAIN": "",
+   "AIR_MSG": "호흡기가 예민하신 분들은 몸상태 유의하며 활동해주세요.",
+   "FCST24HOURS": [
+    {
+     "FCST_DT": "202610021700",
+     "TEMP": "22",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610021800",
+     "TEMP": "20",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610021900",
+     "TEMP": "18",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610022000",
+     "TEMP": "17",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610022100",
+     "TEMP": "17",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610022200",
+     "TEMP": "16",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610022300",
+     "TEMP": "15",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610030000",
+     "TEMP": "14",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610030100",
+     "TEMP": "14",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610030200",
+     "TEMP": "13",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610030300",
+     "TEMP": "13",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610030400",
+     "TEMP": "12",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610030500",
+     "TEMP": "12",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610030600",
+     "TEMP": "12",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610030700",
+     "TEMP": "12",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610030800",
+     "TEMP": "14",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610030900",
+     "TEMP": "16",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "0",
+     "SKY_STTS": "맑음"
+    },
+    {
+     "FCST_DT": "202610031000",
+     "TEMP": "18",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "20",
+     "SKY_STTS": "구름많음"
+    },
+    {
+     "FCST_DT": "202610031100",
+     "TEMP": "20",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "30",
+     "SKY_STTS": "흐림"
+    },
+    {
+     "FCST_DT": "202610031200",
+     "TEMP": "21",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "30",
+     "SKY_STTS": "흐림"
+    },
+    {
+     "FCST_DT": "202610031300",
+     "TEMP": "22",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "30",
+     "SKY_STTS": "흐림"
+    },
+    {
+     "FCST_DT": "202610031400",
+     "TEMP": "22",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "30",
+     "SKY_STTS": "흐림"
+    },
+    {
+     "FCST_DT": "202610031500",
+     "TEMP": "22",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "30",
+     "SKY_STTS": "흐림"
+    },
+    {
+     "FCST_DT": "202610031600",
+     "TEMP": "22",
+     "PRECIPITATION": "-",
+     "PRECPT_TYPE": "없음",
+     "RAIN_CHANCE": "30",
+     "SKY_STTS": "흐림"
+    }
+   ],
+   "NEWS_LIST": []
+  }
+ ],
+ "CHARGER_STTS": [
+  {
+   "STAT_NM": "BMW차징스테이션 파르나스호텔",
+   "STAT_ID": "PI204158",
+   "STAT_ADDR": "서울특별시 강남구 테헤란로 521",
+   "STAT_X": "127.06075069",
+   "STAT_Y": "37.509178025",
+   "STAT_USETIME": "24시간 이용가능",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "",
+   "STAT_KINDDETAIL": "숙박시설",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-28 16:16",
+     "LASTTSDT": "2026-09-28 15:07",
+     "LASTTEDT": "2026-09-28 16:16",
+     "NOWTSDT": null,
+     "OUTPUT": "14",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "02",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 13:56",
+     "LASTTSDT": "2026-10-01 12:15",
+     "LASTTEDT": "2026-10-01 12:45",
+     "NOWTSDT": null,
+     "OUTPUT": "14",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "03",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 11:51",
+     "LASTTSDT": "2026-10-02 10:39",
+     "LASTTEDT": "2026-10-02 11:39",
+     "NOWTSDT": null,
+     "OUTPUT": "14",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "04",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 15:56",
+     "LASTTSDT": "2026-10-01 11:27",
+     "LASTTEDT": "2026-10-01 14:50",
+     "NOWTSDT": null,
+     "OUTPUT": "14",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "05",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "상태미확인",
+     "STATUPDDT": "2026-09-24 12:08",
+     "LASTTSDT": "2026-09-21 11:26",
+     "LASTTEDT": "2026-09-21 12:26",
+     "NOWTSDT": null,
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "06",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "상태미확인",
+     "STATUPDDT": "2026-09-24 12:08",
+     "LASTTSDT": "2026-09-23 23:54",
+     "LASTTEDT": "2026-09-24 00:46",
+     "NOWTSDT": null,
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "그랜드 인터컨티넨탈 서울 파르나스",
+   "STAT_ID": "PI715645",
+   "STAT_ADDR": "서울특별시 강남구 테헤란로 521",
+   "STAT_X": "127.06085249",
+   "STAT_Y": "37.509182478",
+   "STAT_USETIME": "00:00~24:00",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "Y",
+   "STAT_LIMITDETAIL": "시설 상황에 따라 이용이 제한될 수 있음",
+   "STAT_KINDDETAIL": "숙박시설",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 21:15",
+     "LASTTSDT": "2026-10-01 11:33",
+     "LASTTEDT": "2026-10-01 17:47",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "02",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 15:15",
+     "LASTTSDT": "2026-10-02 15:11",
+     "LASTTEDT": "2026-10-02 12:36",
+     "NOWTSDT": "2026-10-02 15:15",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "03",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 13:50",
+     "LASTTSDT": "2026-10-02 13:47",
+     "LASTTEDT": "2026-10-02 12:56",
+     "NOWTSDT": "2026-10-02 13:50",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "04",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 10:50",
+     "LASTTSDT": "2026-10-02 10:46",
+     "LASTTEDT": "2026-10-02 09:53",
+     "NOWTSDT": "2026-10-02 10:50",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "05",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-30 21:25",
+     "LASTTSDT": "2026-09-30 20:01",
+     "LASTTEDT": "2026-09-30 21:22",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "06",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 15:35",
+     "LASTTSDT": "2026-10-02 15:31",
+     "LASTTEDT": "2026-10-02 14:19",
+     "NOWTSDT": "2026-10-02 15:35",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "07",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 15:15",
+     "LASTTSDT": "2026-10-01 13:17",
+     "LASTTEDT": "2026-10-01 14:55",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "08",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-30 21:30",
+     "LASTTSDT": "2026-09-30 19:12",
+     "LASTTEDT": "2026-09-30 21:28",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "09",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 15:00",
+     "LASTTSDT": "2026-10-02 14:55",
+     "LASTTEDT": "2026-10-01 22:06",
+     "NOWTSDT": "2026-10-02 15:00",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "10",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 07:30",
+     "LASTTSDT": "2026-10-02 07:25",
+     "LASTTEDT": "2026-10-01 22:08",
+     "NOWTSDT": "2026-10-02 07:30",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "11",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 15:20",
+     "LASTTSDT": "2026-10-02 11:09",
+     "LASTTEDT": "2026-10-02 15:09",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "12",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 08:50",
+     "LASTTSDT": "2026-10-02 08:47",
+     "LASTTEDT": "2026-10-01 15:26",
+     "NOWTSDT": "2026-10-02 08:50",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "13",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 09:30",
+     "LASTTSDT": "2026-10-02 09:27",
+     "LASTTEDT": "2026-10-01 23:06",
+     "NOWTSDT": "2026-10-02 09:30",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "서울강남 삼성코엑스옥상 A존",
+   "STAT_ID": "EV018847",
+   "STAT_ADDR": "서울 강남구 영동대로 513",
+   "STAT_X": "127.0591590",
+   "STAT_Y": "37.5118239",
+   "STAT_USETIME": "24시간 이용가능",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "",
+   "STAT_KINDDETAIL": "백화점",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 13:05",
+     "LASTTSDT": "2026-10-02 09:05",
+     "LASTTEDT": "2026-10-02 13:03",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "02",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 15:41",
+     "LASTTSDT": "2026-10-02 11:35",
+     "LASTTEDT": "2026-10-02 13:46",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "03",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 15:03",
+     "LASTTSDT": "2026-10-02 09:39",
+     "LASTTEDT": "2026-10-02 11:12",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "04",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 03:41",
+     "LASTTSDT": "2026-10-02 03:32",
+     "LASTTEDT": "2026-10-02 03:38",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "05",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 16:43",
+     "LASTTSDT": "2026-10-01 10:01",
+     "LASTTEDT": "2026-10-01 15:22",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "06",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 14:43",
+     "LASTTSDT": "2026-10-01 08:43",
+     "LASTTEDT": "2026-10-01 11:09",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "07",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 12:25",
+     "LASTTSDT": "2026-10-02 05:50",
+     "LASTTEDT": "2026-10-02 07:14",
+     "NOWTSDT": "2026-10-02 10:26",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "08",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-30 13:41",
+     "LASTTSDT": "2026-09-28 10:33",
+     "LASTTEDT": "2026-09-28 15:03",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "09",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-30 13:41",
+     "LASTTSDT": "2026-09-21 14:55",
+     "LASTTEDT": "2026-09-21 15:16",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "서울강남 삼성코엑스옥상 B존",
+   "STAT_ID": "EV018848",
+   "STAT_ADDR": "서울 강남구 영동대로 513",
+   "STAT_X": "127.0591590",
+   "STAT_Y": "37.5118239",
+   "STAT_USETIME": "24시간 이용가능",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "",
+   "STAT_KINDDETAIL": "백화점",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-01 21:02",
+     "LASTTSDT": "2026-09-30 23:50",
+     "LASTTEDT": "2026-10-01 00:01",
+     "NOWTSDT": "2026-10-01 12:19",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "02",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 19:33",
+     "LASTTSDT": "2026-10-01 10:24",
+     "LASTTEDT": "2026-10-01 14:17",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "03",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 13:42",
+     "LASTTSDT": "2026-10-02 11:09",
+     "LASTTEDT": "2026-10-02 12:49",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "04",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 19:31",
+     "LASTTSDT": "2026-10-01 09:37",
+     "LASTTEDT": "2026-10-01 11:40",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "05",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 08:58",
+     "LASTTSDT": "2026-09-30 20:09",
+     "LASTTEDT": "2026-10-01 00:26",
+     "NOWTSDT": "2026-10-02 08:58",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "06",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 18:10",
+     "LASTTSDT": "2026-10-01 11:10",
+     "LASTTEDT": "2026-10-01 14:00",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "07",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 08:24",
+     "LASTTSDT": "2026-09-30 09:06",
+     "LASTTEDT": "2026-09-30 13:54",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "08",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-28 20:11",
+     "LASTTSDT": "2026-09-28 04:24",
+     "LASTTEDT": "2026-09-28 12:59",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "09",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-28 10:56",
+     "LASTTSDT": "2026-09-22 13:21",
+     "LASTTEDT": "2026-09-22 15:48",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "10",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 03:57",
+     "LASTTSDT": "2026-09-05 14:15",
+     "LASTTEDT": "2026-09-05 15:51",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "11",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 14:07",
+     "LASTTSDT": "2026-10-02 12:42",
+     "LASTTEDT": "2026-10-02 14:06",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "12",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 11:16",
+     "LASTTSDT": "2026-09-14 14:42",
+     "LASTTEDT": "2026-09-14 18:26",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "13",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-09-11 12:31",
+     "LASTTSDT": "2026-09-10 13:28",
+     "LASTTEDT": "2026-09-10 14:55",
+     "NOWTSDT": "2026-09-11 12:31",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "14",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-08-27 14:47",
+     "LASTTSDT": "2026-08-27 13:14",
+     "LASTTEDT": "2026-08-27 14:43",
+     "NOWTSDT": "2026-08-27 14:47",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "15",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 11:20",
+     "LASTTSDT": "2026-09-09 10:41",
+     "LASTTEDT": "2026-09-09 10:43",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "16",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 14:42",
+     "LASTTSDT": "2026-10-02 10:03",
+     "LASTTEDT": "2026-10-02 13:12",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "17",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-09-23 08:19",
+     "LASTTSDT": "2026-09-21 11:01",
+     "LASTTEDT": "2026-09-21 14:34",
+     "NOWTSDT": "2026-09-23 08:19",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "18",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-09-28 10:40",
+     "LASTTSDT": "2026-09-02 08:55",
+     "LASTTEDT": "2026-09-02 15:03",
+     "NOWTSDT": "2026-09-28 10:40",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "서울강남 삼성코엑스옥상 C존",
+   "STAT_ID": "EV018849",
+   "STAT_ADDR": "서울 강남구 영동대로 513",
+   "STAT_X": "127.0591590",
+   "STAT_Y": "37.5118239",
+   "STAT_USETIME": "24시간 이용가능",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "",
+   "STAT_KINDDETAIL": "백화점",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-29 17:45",
+     "LASTTSDT": "2026-09-29 12:03",
+     "LASTTEDT": "2026-09-29 12:10",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "02",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-29 18:02",
+     "LASTTSDT": "2026-09-29 17:45",
+     "LASTTEDT": "2026-09-29 18:00",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "03",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-26 11:41",
+     "LASTTSDT": "2026-09-22 01:17",
+     "LASTTEDT": "2026-09-22 01:24",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "04",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-28 01:10",
+     "LASTTSDT": "2026-09-21 08:51",
+     "LASTTEDT": "2026-09-21 15:03",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "05",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 11:02",
+     "LASTTSDT": "2026-09-10 16:30",
+     "LASTTEDT": "2026-09-10 18:37",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "06",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "상태미확인",
+     "STATUPDDT": "2026-09-30 12:43",
+     "LASTTSDT": "2026-09-29 12:03",
+     "LASTTEDT": "2026-09-29 12:15",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "07",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-17 19:25",
+     "LASTTSDT": "2026-09-17 17:11",
+     "LASTTEDT": "2026-09-17 19:24",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "08",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-29 16:08",
+     "LASTTSDT": "2026-09-29 16:06",
+     "LASTTEDT": "2026-09-29 16:07",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "09",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-29 11:59",
+     "LASTTSDT": "2026-09-29 07:57",
+     "LASTTEDT": "2026-09-29 11:59",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "서울강남 삼성코엑스옥상 D존",
+   "STAT_ID": "EV018850",
+   "STAT_ADDR": "서울 강남구 영동대로 513",
+   "STAT_X": "127.0591590",
+   "STAT_Y": "37.5118239",
+   "STAT_USETIME": "24시간 이용가능",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "",
+   "STAT_KINDDETAIL": "백화점",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "상태미확인",
+     "STATUPDDT": "2026-09-15 15:03",
+     "LASTTSDT": "2026-07-21 11:05",
+     "LASTTEDT": "2026-07-21 11:05",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "02",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "상태미확인",
+     "STATUPDDT": "2026-09-30 13:28",
+     "LASTTSDT": "2026-09-29 11:21",
+     "LASTTEDT": "2026-09-29 11:24",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "서울강남 코엑스옥상 1",
+   "STAT_ID": "EV004262",
+   "STAT_ADDR": "서울특별시 강남구 영동대로 513",
+   "STAT_X": "127.059159",
+   "STAT_Y": "37.5118239",
+   "STAT_USETIME": "24시간 이용가능",
+   "STAT_PARKPAY": "Y",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "외부인 사용불가",
+   "STAT_KINDDETAIL": "사업장(사옥)",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 13:22",
+     "LASTTSDT": "2026-10-01 11:47",
+     "LASTTEDT": "2026-10-01 13:21",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "02",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 13:28",
+     "LASTTSDT": "2026-10-02 09:28",
+     "LASTTEDT": "2026-10-02 13:26",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "03",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 14:59",
+     "LASTTSDT": "2026-10-02 07:52",
+     "LASTTEDT": "2026-10-02 14:45",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "서울강남 코엑스옥상 2",
+   "STAT_ID": "EV016823",
+   "STAT_ADDR": "서울 강남구 영동대로 513",
+   "STAT_X": "127.0591590",
+   "STAT_Y": "37.5118239",
+   "STAT_USETIME": "24시간 이용가능",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "",
+   "STAT_KINDDETAIL": "전시관",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-09-30 17:18",
+     "LASTTSDT": "2026-09-29 10:03",
+     "LASTTEDT": "2026-09-29 12:18",
+     "NOWTSDT": "2026-09-30 17:18",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "02",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-01 20:48",
+     "LASTTSDT": "2026-10-01 10:44",
+     "LASTTEDT": "2026-10-01 12:36",
+     "NOWTSDT": "2026-10-01 20:48",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "03",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 13:48",
+     "LASTTSDT": "2026-10-02 10:03",
+     "LASTTEDT": "2026-10-02 12:43",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "04",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "상태미확인",
+     "STATUPDDT": "2026-10-01 12:53",
+     "LASTTSDT": "2026-09-29 11:32",
+     "LASTTEDT": "2026-09-29 11:33",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "05",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "상태미확인",
+     "STATUPDDT": "2026-10-01 17:28",
+     "LASTTSDT": "2026-09-29 11:46",
+     "LASTTEDT": "2026-09-29 12:33",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "06",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "상태미확인",
+     "STATUPDDT": "2026-09-30 16:13",
+     "LASTTSDT": "2026-09-29 11:28",
+     "LASTTEDT": "2026-09-29 11:30",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "웨스틴 서울 파르나스",
+   "STAT_ID": "PI715650",
+   "STAT_ADDR": "서울특별시 강남구 봉은사로 524",
+   "STAT_X": "127.0572509",
+   "STAT_Y": "37.5128321",
+   "STAT_USETIME": "09:00~18:00",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "",
+   "STAT_KINDDETAIL": "아파트",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-29 22:47",
+     "LASTTSDT": "2026-09-29 14:04",
+     "LASTTEDT": "2026-09-29 22:45",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "02",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 08:00",
+     "LASTTSDT": "2026-10-02 06:23",
+     "LASTTEDT": "2026-10-02 07:59",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "03",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 15:05",
+     "LASTTSDT": "2026-10-02 15:02",
+     "LASTTEDT": "2026-09-26 13:13",
+     "NOWTSDT": "2026-10-02 15:05",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "04",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 19:50",
+     "LASTTSDT": "2026-10-01 16:34",
+     "LASTTEDT": "2026-10-01 17:52",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "05",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 08:50",
+     "LASTTSDT": "2026-10-02 08:46",
+     "LASTTEDT": "2026-10-01 12:19",
+     "NOWTSDT": "2026-10-02 08:50",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "06",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 21:55",
+     "LASTTSDT": "2026-10-01 20:25",
+     "LASTTEDT": "2026-10-01 21:53",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "07",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-29 22:01",
+     "LASTTSDT": "2026-09-29 18:24",
+     "LASTTEDT": "2026-09-29 20:49",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "08",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 11:55",
+     "LASTTSDT": "2026-10-02 11:52",
+     "LASTTEDT": "2026-10-01 13:16",
+     "NOWTSDT": "2026-10-02 11:55",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "09",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-29 19:45",
+     "LASTTSDT": "2026-09-29 09:57",
+     "LASTTEDT": "2026-09-29 19:17",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "10",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 17:05",
+     "LASTTSDT": "2026-10-01 13:08",
+     "LASTTEDT": "2026-10-01 17:04",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "11",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 15:00",
+     "LASTTSDT": "2026-10-02 14:57",
+     "LASTTEDT": "2026-10-01 22:27",
+     "NOWTSDT": "2026-10-02 15:00",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "코엑스",
+   "STAT_ID": "HE001043",
+   "STAT_ADDR": "서울특별시 강남구 영동대로 513",
+   "STAT_X": "127.059498",
+   "STAT_Y": "37.512094",
+   "STAT_USETIME": "24시간 이용가능",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "",
+   "STAT_KINDDETAIL": "마트(쇼핑몰)",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "04",
+     "CHARGER_TYPE": "DC차데모+DC콤보",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 18:06",
+     "LASTTSDT": "2026-10-01 16:17",
+     "LASTTEDT": "2026-10-01 18:06",
+     "NOWTSDT": null,
+     "OUTPUT": "50",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "05",
+     "CHARGER_TYPE": "DC차데모+DC콤보",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 11:26",
+     "LASTTSDT": "2026-10-02 09:14",
+     "LASTTEDT": "2026-10-02 11:26",
+     "NOWTSDT": null,
+     "OUTPUT": "50",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "06",
+     "CHARGER_TYPE": "DC차데모+DC콤보",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 15:53",
+     "LASTTSDT": "2026-10-01 15:52",
+     "LASTTEDT": "2026-10-01 15:53",
+     "NOWTSDT": null,
+     "OUTPUT": "50",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "07",
+     "CHARGER_TYPE": "DC차데모+DC콤보",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 15:13",
+     "LASTTSDT": "2026-10-02 12:11",
+     "LASTTEDT": "2026-10-02 15:13",
+     "NOWTSDT": null,
+     "OUTPUT": "50",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "08",
+     "CHARGER_TYPE": "DC차데모+DC콤보",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 17:09",
+     "LASTTSDT": "2026-10-01 14:57",
+     "LASTTEDT": "2026-10-01 17:09",
+     "NOWTSDT": null,
+     "OUTPUT": "50",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "09",
+     "CHARGER_TYPE": "DC차데모+DC콤보",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 13:11",
+     "LASTTSDT": "2026-10-02 12:12",
+     "LASTTEDT": "2026-10-02 13:11",
+     "NOWTSDT": null,
+     "OUTPUT": "50",
+     "METHOD": "단독"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "한국도심공항",
+   "STAT_ID": "HE212862",
+   "STAT_ADDR": "서울특별시 강남구 테헤란로87길 22",
+   "STAT_X": "127.059441",
+   "STAT_Y": "37.509498",
+   "STAT_USETIME": "24시간 이용가능",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "",
+   "STAT_KINDDETAIL": "기타",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-26 17:17",
+     "LASTTSDT": "2026-09-26 16:53",
+     "LASTTEDT": "2026-09-26 17:17",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "한국도심공항",
+   "STAT_ID": "ST116811",
+   "STAT_ADDR": "서울특별시 강남구 테헤란로87길 22",
+   "STAT_X": "127.05944256",
+   "STAT_Y": "37.509633099",
+   "STAT_USETIME": "24시간 이용가능",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "",
+   "STAT_KINDDETAIL": "사업장(사옥)",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "통신이상",
+     "STATUPDDT": "2026-09-29 21:20",
+     "LASTTSDT": "2026-09-29 17:06",
+     "LASTTEDT": "2026-09-29 17:54",
+     "NOWTSDT": null,
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "02",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "통신이상",
+     "STATUPDDT": "2026-09-29 21:20",
+     "LASTTSDT": "2026-09-29 14:01",
+     "LASTTEDT": "2026-09-29 15:03",
+     "NOWTSDT": null,
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "03",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "통신이상",
+     "STATUPDDT": "2026-09-29 21:18",
+     "LASTTSDT": "2026-09-28 05:57",
+     "LASTTEDT": "2026-09-29 14:05",
+     "NOWTSDT": null,
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "04",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "통신이상",
+     "STATUPDDT": "2026-09-29 21:18",
+     "LASTTSDT": "2026-09-29 02:47",
+     "LASTTEDT": "2026-09-29 04:11",
+     "NOWTSDT": null,
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "05",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-29 10:59",
+     "LASTTSDT": "2026-09-06 16:14",
+     "LASTTEDT": "2026-09-06 16:33",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "06",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 13:49",
+     "LASTTSDT": "2026-10-02 13:49",
+     "LASTTEDT": "2026-10-02 12:13",
+     "NOWTSDT": "2026-10-02 11:07",
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "07",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 15:44",
+     "LASTTSDT": "2026-10-02 14:09",
+     "LASTTEDT": "2026-10-02 15:44",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "08",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 11:01",
+     "LASTTSDT": "2026-10-02 07:37",
+     "LASTTEDT": "2026-10-02 11:01",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    }
+   ]
+  },
+  {
+   "STAT_NM": "현대백화점 무역센터점",
+   "STAT_ID": "HY000899",
+   "STAT_ADDR": "서울특별시 강남구 테헤란로 517",
+   "STAT_X": "127.0597651",
+   "STAT_Y": "37.5086151",
+   "STAT_USETIME": "10:30 ~ 22:00",
+   "STAT_PARKPAY": "N",
+   "STAT_LIMITYN": "N",
+   "STAT_LIMITDETAIL": "",
+   "STAT_KINDDETAIL": "백화점",
+   "CHARGER_DETAILS": [
+    {
+     "CHARGER_ID": "01",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 13:47",
+     "LASTTSDT": "2026-10-02 12:53",
+     "LASTTEDT": "2026-10-02 13:32",
+     "NOWTSDT": null,
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "02",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "충전중",
+     "STATUPDDT": "2026-10-02 15:21",
+     "LASTTSDT": "2026-10-02 15:20",
+     "LASTTEDT": "2026-10-02 15:20",
+     "NOWTSDT": "2026-10-02 15:20",
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "03",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-01 17:00",
+     "LASTTSDT": "2026-10-01 15:56",
+     "LASTTEDT": "2026-10-01 16:58",
+     "NOWTSDT": null,
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "04",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 15:19",
+     "LASTTSDT": "2026-10-02 15:18",
+     "LASTTEDT": "2026-10-02 15:18",
+     "NOWTSDT": null,
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "05",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 15:19",
+     "LASTTSDT": "2026-10-02 13:34",
+     "LASTTEDT": "2026-10-02 14:19",
+     "NOWTSDT": null,
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "06",
+     "CHARGER_TYPE": "DC콤보",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-09-27 17:51",
+     "LASTTSDT": "2026-09-27 17:50",
+     "LASTTEDT": "2026-09-27 17:50",
+     "NOWTSDT": null,
+     "OUTPUT": "100",
+     "METHOD": "동시"
+    },
+    {
+     "CHARGER_ID": "07",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 14:24",
+     "LASTTSDT": "2026-10-02 13:24",
+     "LASTTEDT": "2026-10-02 14:23",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    },
+    {
+     "CHARGER_ID": "08",
+     "CHARGER_TYPE": "AC완속",
+     "CHARGER_STAT": "사용가능",
+     "STATUPDDT": "2026-10-02 15:28",
+     "LASTTSDT": "2026-10-02 12:49",
+     "LASTTEDT": "2026-10-02 15:27",
+     "NOWTSDT": null,
+     "OUTPUT": "7",
+     "METHOD": "단독"
+    }
+   ]
+  }
+ ],
+ "EVENT_STTS": [],
+ "LIVE_CMRCL_STTS": {
+  "AREA_CMRCL_LVL": "보통",
+  "AREA_SH_PAYMENT_CNT": "46",
+  "AREA_SH_PAYMENT_AMT_MIN": 550000,
+  "AREA_SH_PAYMENT_AMT_MAX": 600000,
+  "CMRCL_RSB": [
+   {
+    "RSB_LRG_CTGR": "음식·음료",
+    "RSB_MID_CTGR": "제과/커피/패스트푸드",
+    "RSB_PAYMENT_LVL": "보통",
+    "RSB_SH_PAYMENT_CNT": 11,
+    "RSB_SH_PAYMENT_AMT_MIN": 90000,
+    "RSB_SH_PAYMENT_AMT_MAX": 100000,
+    "RSB_MCT_CNT": 25,
+    "RSB_MCT_TIME": "202608"
+   },
+   {
+    "RSB_LRG_CTGR": "음식·음료",
+    "RSB_MID_CTGR": "기타요식",
+    "RSB_PAYMENT_LVL": "보통",
+    "RSB_SH_PAYMENT_CNT": 9,
+    "RSB_SH_PAYMENT_AMT_MIN": 150000,
+    "RSB_SH_PAYMENT_AMT_MAX": 200000,
+    "RSB_MCT_CNT": 32,
+    "RSB_MCT_TIME": "202608"
+   },
+   {
+    "RSB_LRG_CTGR": "유통",
+    "RSB_MID_CTGR": "편의점",
+    "RSB_PAYMENT_LVL": "보통",
+    "RSB_SH_PAYMENT_CNT": 17,
+    "RSB_SH_PAYMENT_AMT_MIN": 60000,
+    "RSB_SH_PAYMENT_AMT_MAX": 70000,
+    "RSB_MCT_CNT": 15,
+    "RSB_MCT_TIME": "202608"
+   },
+   {
+    "RSB_LRG_CTGR": "의료",
+    "RSB_MID_CTGR": "병원",
+    "RSB_PAYMENT_LVL": "한산한",
+    "RSB_SH_PAYMENT_CNT": 5,
+    "RSB_SH_PAYMENT_AMT_MIN": 200000,
+    "RSB_SH_PAYMENT_AMT_MAX": 250000,
+    "RSB_MCT_CNT": 33,
+    "RSB_MCT_TIME": "202608"
+   },
+   {
+    "RSB_LRG_CTGR": "의료",
+    "RSB_MID_CTGR": "약국",
+    "RSB_PAYMENT_LVL": "한산한",
+    "RSB_SH_PAYMENT_CNT": 4,
+    "RSB_SH_PAYMENT_AMT_MIN": 40000,
+    "RSB_SH_PAYMENT_AMT_MAX": 50000,
+    "RSB_MCT_CNT": 6,
+    "RSB_MCT_TIME": "202608"
+   }
+  ],
+  "CMRCL_MALE_RATE": 21.8,
+  "CMRCL_FEMALE_RATE": 78.2,
+  "CMRCL_10_RATE": 0.0,
+  "CMRCL_20_RATE": 8.6,
+  "CMRCL_30_RATE": 9.6,
+  "CMRCL_40_RATE": 16.1,
+  "CMRCL_50_RATE": 52.3,
+  "CMRCL_60_RATE": 13.4,
+  "CMRCL_PERSONAL_RATE": 91.7,
+  "CMRCL_CORPORATION_RATE": 8.3,
+  "CMRCL_TIME": "20261002 1610"
+ },
+ "LIVE_DST_MESSAGE": [],
+ "LIVE_YNA_NEWS": []
+}
