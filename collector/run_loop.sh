@@ -6,9 +6,10 @@ set -u
 END=$(( $(date +%s) + ${LOOP_SECONDS:-19800} ))
 
 while :; do
-  python collector/collect.py;      P=$?
-  python collector/collect_city.py; C=$?
-  echo "인구데이터 종료코드=$P / 도시데이터 종료코드=$C"
+  # 서울시 서버가 응답하지 않을 때 한 번의 수집이 반복 전체를 막지 않도록 각각 최대 10분
+  timeout 600 python collector/collect.py;      P=$?
+  timeout 600 python collector/collect_city.py; C=$?
+  echo "인구데이터 종료코드=$P / 도시데이터 종료코드=$C (124 = 10분 초과로 중단)"
 
   (
     cd databranch || exit 1
