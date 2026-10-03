@@ -1,12 +1,15 @@
-# 서울시 실시간 인구데이터 자동 수집
-# 1시간마다 collector/collect.py 를 실행하고, 결과를 data 브랜치에 저장한다.
-# (main 브랜치 기록이 수집 커밋으로 지저분해지지 않도록 브랜치를 분리)
+# 서울시 실시간 인구·도시데이터 자동 수집
+# 결과는 data 브랜치에 저장한다. (main 기록이 수집 커밋으로 지저분해지지 않도록 분리)
+#
+# GitHub 예약 실행은 몇 시간씩 밀리거나 빠지는 일이 잦아서,
+# 한 번 실행되면 collector/run_loop.sh 가 약 5시간 반 동안 매시 7분마다 수집을 반복한다.
+# 그 사이 들어온 예약 실행은 1개만 대기하고(나머지는 취소로 표시됨), 앞 실행이 끝나면 이어받는다.
 name: 인구 데이터 수집
 
 on:
   schedule:
-    - cron: "7 * * * *"   # 매시 7분 (정각은 GitHub 서버가 붐벼서 밀리기 쉬움)
-  workflow_dispatch:       # Actions 탭에서 수동 실행 버튼
+    - cron: "7 * * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -18,7 +21,13 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 345
+    env:
+      SEOUL_API_KEY: ${{ secrets.SEOUL_API_KEY }}
+      SEOUL_CITYDATA_KEY: ${{ secrets.SEOUL_CITYDATA_KEY }}
+      RAW_DIR: databranch/data/raw
+      CITY_RAW_DIR: databranch/data/raw_city
+      SAMPLE_DIR: databranch/data/samples
     steps:
       - name: 코드 받기 (main)
         uses: actions/checkout@v4
@@ -36,39 +45,10 @@ jobs:
       - name: 라이브러리 설치
         run: pip install requests pandas openpyxl
 
-      - name: 수집 (인구데이터)
-        id: ppltn
-        continue-on-error: true
-        env:
-          SEOUL_API_KEY: ${{ secrets.SEOUL_API_KEY }}
-          RAW_DIR: databranch/data/raw
-        run: python collector/collect.py
-
-      - name: 수집 (도시데이터 요약)
-        id: city
-        continue-on-error: true
-        env:
-          SEOUL_CITYDATA_KEY: ${{ secrets.SEOUL_CITYDATA_KEY }}
-          CITY_RAW_DIR: databranch/data/raw_city
-          SAMPLE_DIR: databranch/data/samples
-        run: python collector/collect_city.py
-
-      - name: 저장
-        working-directory: databranch
+      - name: 수집 반복 (약 5시간 반)
         run: |
+          cd databranch
           git config user.name "JNO-SW"
           git config user.email "ljh030815@gmail.com"
-          git add data
-          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
-          git commit -m "데이터 수집 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
-          for i in 1 2 3; do
-            git pull --rebase origin data && git push origin HEAD:data && exit 0
-            sleep 5
-          done
-          exit 1
-
-      - name: 결과 확인
-        if: steps.ppltn.outcome == 'failure' || steps.city.outcome == 'failure'
-        run: |
-          echo "인구데이터: ${{ steps.ppltn.outcome }} / 도시데이터: ${{ steps.city.outcome }}"
-          exit 1
+          cd ..
+          bash collector/run_loop.sh

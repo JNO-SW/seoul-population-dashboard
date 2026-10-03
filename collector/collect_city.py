@@ -123,6 +123,10 @@ def summarize(city: dict) -> dict:
     # 지하철·버스 승하차 인원 요약 (응답에 있는 요약 항목을 그대로 저장)
     row.update(scalars(find_key(city, "LIVE_SUB_PPLTN"), ""))
     row.update(scalars(find_key(city, "LIVE_BUS_PPLTN"), ""))
+    # 역·정류소가 없는 장소는 요약값이 빈칸으로 오므로 목록 개수(0)로 채운다
+    for key, items in (("SUB_STN_CNT", subway), ("BUS_STN_CNT", bus)):
+        n = to_num(row.get(key))
+        row[key] = n if n is not None else len(items)
     return row
 
 
