@@ -10,6 +10,10 @@ while :; do
   timeout 600 python collector/collect.py;      P=$?
   timeout 600 python collector/collect_city.py; C=$?
   echo "인구데이터 종료코드=$P / 도시데이터 종료코드=$C (124 = 10분 초과로 중단)"
+  # 실패한 회차는 실행 요약(Annotations)에 남겨서 나중에 원인을 확인할 수 있게 한다
+  STAMP=$(TZ=Asia/Seoul date '+%m-%d %H:%M')
+  [ "$P" -ne 0 ] && echo "::warning::$STAMP 인구데이터 수집 실패 (종료코드 $P)"
+  [ "$C" -ne 0 ] && echo "::warning::$STAMP 도시데이터 수집 실패 (종료코드 $C)"
 
   (
     cd databranch || exit 1
