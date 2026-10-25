@@ -11,7 +11,7 @@ streamlit run app.py
 
 브라우저에서 `http://localhost:8501` 이 열립니다.
 
-> 현재 `data/sample.csv`는 **연습용 가짜 데이터**입니다. 실제 데이터를 받으면 교체합니다.
+> `data/raw`에 실제 수집 데이터가 없으면 `data/sample`의 **가짜 데이터**(장소 8곳 × 2주)로 실행됩니다.
 
 ## 폴더 구조
 
