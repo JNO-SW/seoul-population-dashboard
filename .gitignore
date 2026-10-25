@@ -14,3 +14,8 @@ venv/
 Thumbs.db
 .vscode/
 .idea/
+
+# 수집 원본 데이터 (data 브랜치에서 받아 쓰기만 하고 올리지 않음)
+data/raw/
+data/raw_city/
+data/samples/

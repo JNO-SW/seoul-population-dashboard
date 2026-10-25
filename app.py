@@ -1,43 +1,60 @@
 """
-대시보드 메인 화면 (담당: 조장)
+대시보드 (담당: 이준호)
 실행: streamlit run app.py
 """
+from typing import Dict, Optional
+
 import streamlit as st
 
-from src.charts import ALL_CHARTS
-from src.repository import PlaceRepository
+from src.charts import PAGES
+from src.charts.base import BaseChart
+from src.models import Place
+from src.repository import PlaceRepository, load_repository
 
-from pathlib import Path
 
-# 수집한 실제 데이터(data/raw)가 있으면 그걸, 없으면 연습용 샘플을 쓴다.
-RAW_DIR = Path("data/raw")
-DATA_PATH = str(RAW_DIR) if any(RAW_DIR.glob("*.csv")) else "data/sample.csv"
+class DashboardApp:
+    def __init__(self, repo: PlaceRepository, charts: Dict[str, BaseChart]):
+        self.repo = repo
+        self.charts = charts
+        self.place: Optional[Place] = None
+
+    def run(self) -> None:
+        self.render_page(self.render_sidebar())
+
+    def render_sidebar(self) -> str:
+        st.sidebar.title("서울 인구 대시보드")
+        page = st.sidebar.radio("페이지", list(self.charts))
+        category = st.sidebar.selectbox("장소 분류", self.repo.categories())
+        self.place = self.repo.get(st.sidebar.selectbox("장소", self.repo.names(category)))
+        return page
+
+    def render_page(self, name: str) -> None:
+        chart = self.charts[name]
+        st.header(name)
+        try:
+            chart.controls(self.repo)
+            cards = chart.summary_cards(self.place)
+            if cards:
+                for col, (k, v) in zip(st.columns(len(cards)), cards.items()):
+                    col.metric(k, v)
+            for fig in chart.render(self.repo, self.place):
+                st.plotly_chart(fig, width="stretch")
+        except NotImplementedError:
+            st.info(f"{chart.owner} 담당 페이지: 구현 전")
+        st.caption(f"담당: {chart.owner}")
+
 
 st.set_page_config(page_title="서울 인구 대시보드", layout="wide")
 
 
 @st.cache_resource
-def load_repository() -> PlaceRepository:
-    return PlaceRepository(DATA_PATH)
+def get_repo() -> PlaceRepository:
+    return load_repository()
 
 
-repo = load_repository()
+@st.cache_resource
+def get_charts() -> Dict[str, BaseChart]:
+    return {name: cls() for name, cls in PAGES.items()}
 
-# ── 사이드바: 필터 ─────────────────────────────────
-st.sidebar.title("서울 인구 대시보드")
-category = st.sidebar.selectbox("장소 분류", repo.categories())
-place_name = st.sidebar.selectbox("장소", repo.names(category))
-place = repo.get(place_name)
 
-# ── 상단 요약 카드 ─────────────────────────────────
-st.header(place.name)
-peak = place.peak_record()
-col1, col2, col3 = st.columns(3)
-col1.metric("평균 인구", f"{place.avg_population():,.0f}명")
-col2.metric("가장 붐빈 시각", peak.time.strftime("%m/%d %H시"))
-col3.metric("'붐빔' 시간 비율", f"{place.crowded_ratio():.0f}%")
-
-# ── 팀원 차트: 모두 같은 방식으로 호출 ─────────────
-for chart in ALL_CHARTS:
-    st.plotly_chart(chart.render(place), width="stretch")
-    st.caption(f"담당: {chart.owner}")
+DashboardApp(get_repo(), get_charts()).run()

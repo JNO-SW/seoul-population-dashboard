@@ -16,46 +16,42 @@ streamlit run app.py
 ## 폴더 구조
 
 ```
-app.py                  대시보드 메인 화면            (조장)
-src/
-  models.py             Place, PopulationRecord 클래스 (조장)
-  repository.py         CSV → Place 객체 변환·조회     (조장)
-  charts/
-    base.py             모든 차트의 부모 클래스        (조장)
-    hourly.py           [예시] 시간대별 인구 차트      (조원1)
-    __init__.py         차트 목록 (새 차트 등록)
-data/                   데이터 파일
-scripts/make_sample.py  샘플 데이터 생성기
+app.py                          대시보드 (DashboardApp)                 이준호
+src/models.py                   PopulationRecord, CityRecord, Place, District   이준호
+src/repository.py               PlaceRepository, load_repository()     이준호
+src/charts/base.py              BaseChart (모든 차트의 부모)            이준호
+src/charts/__init__.py          페이지 목록                             이준호
+src/charts/congestion_map.py    메인: 서울 혼잡도 지도                  김재겸
+src/charts/youth.py             연령 구성 비교                          이다혜
+src/charts/visitor.py           장소 이용 특성                          장현규
+src/charts/heatmap.py           요일 × 시간 혼잡 패턴                   김경진
+src/charts/hourly.py            참고용 예시 차트
+collector/                      자동 수집 (GitHub Actions)              이준호
+data/sample/                    가짜 데이터 (scripts/make_sample.py로 생성)
+data/places.xlsx                서울시 주요 121장소 목록
 ```
 
-## 클래스 설계와 객체 간 상호작용
+## 클래스 구조
 
 ```
-app.py ──▶ PlaceRepository ──(CSV 읽기)──▶ Place 객체 여러 개
-                                              └ PopulationRecord 여러 개 (포함 관계)
-app.py ──▶ BaseChart «추상»  render(place)
-               △ 상속
-       HourlyChart, HeatmapChart, ...  (팀원별 차트)
+DashboardApp ──▶ PlaceRepository ◆──▶ District ◆──▶ Place ◆──▶ PopulationRecord, CityRecord
+     │
+     └──▶ BaseChart «abstract»  controls(repo) → render(repo, place) → [Figure]
+              △
+   CongestionMapChart · YouthChart · VisitorChart · CongestionHeatmapChart
 ```
 
-1. `PlaceRepository`가 CSV를 읽어 장소별 `Place` 객체를 만든다.
-2. 각 `Place`는 시간별 기록인 `PopulationRecord`들을 가진다.
-3. `app.py`가 사용자가 고른 장소 객체를 꺼낸다.
-4. 모든 차트에 `chart.render(place)`를 똑같이 호출한다 (다형성).
-5. 각 차트는 `place.to_dataframe()`으로 데이터를 받아 그래프를 돌려준다.
+## 팀원 작업 방법
 
-## 차트 담당 팀원 작업 방법
+1. 자기 브랜치로 전환 (`feat/map`, `feat/youth`, `feat/visitor`, `feat/heatmap`)
+2. main 내용 가져오기 (Update from main / Merge main)
+3. 자기 차트 파일의 `raise NotImplementedError` 부분 구현
+4. `streamlit run app.py`로 자기 페이지 확인
+5. Commit → Push → Pull Request
 
-1. `src/charts/hourly.py`를 복사해서 `src/charts/내차트.py`를 만든다.
-2. 클래스 이름, `title`, `owner`를 바꾼다.
-3. `render(self, place)` 안에서 `place.to_dataframe()`으로 데이터를 받아 그래프를 만든다.
-4. `src/charts/__init__.py`의 `ALL_CHARTS`에 한 줄 추가한다.
-5. `streamlit run app.py`로 확인한다.
-
-**규칙**
-- 자기 차트 파일만 수정합니다. `models.py`, `repository.py`에 필요한 기능이 있으면 조장에게 요청해 주세요.
-- 작업 전에는 항상 **Pull** 먼저.
-- 혼잡도 색상은 `base.py`의 `CONGESTION_COLORS`를 사용합니다.
+- 데이터는 `load_repository()`가 알아서 고른다: `data/raw`에 실제 데이터가 있으면 실제, 없으면 `data/sample` 가짜 데이터
+- 자기 차트 파일 외에는 수정하지 않는다. 필요한 기능은 톡방에 요청
+- 함수 이름·매개변수·반환형은 바꾸지 않는다
 
 ## 데이터 수집 (자동)
 
@@ -70,10 +66,11 @@ app.py ──▶ BaseChart «추상»  render(place)
 
 ```bash
 git fetch origin data
-git checkout origin/data -- data/raw
+git checkout origin/data -- data/raw data/raw_city
+git restore --staged data
 ```
 
-`data/raw`에 CSV가 있으면 대시보드가 자동으로 실제 데이터를 사용하고, 없으면 `data/sample.csv`(가짜 연습 데이터)를 사용합니다.
+받은 파일은 `.gitignore`에 등록되어 있어 커밋되지 않습니다.
 
 ## 사용 데이터
 
