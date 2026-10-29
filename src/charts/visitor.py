@@ -14,7 +14,7 @@ import streamlit as st
 
 from ..models import Place
 from ..repository import PlaceRepository
-from .base import BaseChart
+from .base import CATEGORY_COLORS, PRIMARY, PRIMARY_LIGHT, BaseChart
 
 
 class VisitorChart(BaseChart):
@@ -45,6 +45,7 @@ class VisitorChart(BaseChart):
             "종료일", value=self.end or max(dates, default=None),
             key="visitor_end",
         )
+        st.caption("기간은 아래 시간대별 그래프에만 적용됩니다. 위 산점도는 전체 기간 평균입니다.")
 
     def render(self, repo: PlaceRepository, place: Optional[Place]) -> List[go.Figure]:
         """[_scatter(...), _stacked_by_hour(place)] 2개를 돌려준다 (기간 지정 시 place.records_between 사용)"""
@@ -53,7 +54,8 @@ class VisitorChart(BaseChart):
             return []
 
         # 산점도는 선택한 날짜와 관계없이 전체 기간 요약을 사용한다.
-        figures = [self._apply_theme(self._scatter(repo.summary_dataframe(self.category)))]
+        figures = [self._apply_theme(self._scatter(repo.summary_dataframe(self.category)), height=480,
+                                     title="장소별 평균 인구와 방문자 비율 (전체 기간)")]
         if place is None:
             st.info("시간대별 거주·방문 비율을 보려면 장소를 선택해 주세요.")
             return figures
@@ -64,7 +66,7 @@ class VisitorChart(BaseChart):
             st.info("선택한 기간에 해당 장소의 인구 기록이 없습니다.")
             return figures
 
-        figures.append(self._apply_theme(self._stacked_by_hour(place)))
+        figures.append(self._apply_theme(self._stacked_by_hour(place), title=f"{place.name} · 시간대별 거주·방문 비율"))
         return figures
 
     def _scatter(self, df: pd.DataFrame) -> go.Figure:
@@ -74,7 +76,7 @@ class VisitorChart(BaseChart):
         else:
             fig = px.scatter(
                 df, x="avg_population", y="visitor_rate", color="category",
-                hover_name="name",
+                hover_name="name", color_discrete_map=CATEGORY_COLORS,
                 labels={"avg_population": "평균 인구(명)",
                         "visitor_rate": "방문자 비율(%)", "category": "장소 분류"},
             )
@@ -91,8 +93,8 @@ class VisitorChart(BaseChart):
         hourly = place.visitor_rate_by_hour()
         fig = go.Figure()
         for column, label, color in [
-            ("resident_rate", "거주자", "#4C78A8"),
-            ("non_resident_rate", "방문자", "#F28E2B"),
+            ("resident_rate", "거주자", PRIMARY),
+            ("non_resident_rate", "방문자", PRIMARY_LIGHT),
         ]:
             fig.add_trace(go.Bar(
                 x=hourly["hour"], y=hourly[column], name=label,

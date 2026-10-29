@@ -6,7 +6,7 @@
 """
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Optional, Tuple, Union
 
 import pandas as pd
 
@@ -141,6 +141,11 @@ class PlaceRepository:
     def by_category(self, category: Optional[str]) -> List[Place]:
         """category가 None이면 전체"""
         return [p for p in self._places.values() if category in (None, p.category)]
+
+    def period(self) -> Tuple[datetime, datetime]:
+        """전체 기록의 첫 시각과 마지막 시각"""
+        times = [r.time for p in self._places.values() for r in p.records]
+        return min(times), max(times)
 
     def districts(self) -> List[District]:
         return sorted(self._districts.values(), key=lambda d: d.name)

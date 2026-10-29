@@ -12,7 +12,7 @@ import streamlit as st
 from ..models import Place
 from ..repository import PlaceRepository
 from .base import BaseChart
-from .base import CONGESTION_COLORS, CONGESTION_ORDER
+from .base import CONGESTION_COLORBAR, CONGESTION_COLORS, CONGESTION_ORDER, CONGESTION_SCALE, PRIMARY
 
 
 class CongestionHeatmapChart(BaseChart):
@@ -43,10 +43,14 @@ class CongestionHeatmapChart(BaseChart):
                                    colorscale=self._colorscale(self.metric),
                                    text=self._hover_text(place), hoverinfo="text"))
         if self.metric == "congestion_score":
-            fig.update_traces(zmin=1, zmax=4)
+            fig.update_traces(zmin=1, zmax=4, colorbar=CONGESTION_COLORBAR)
+        else:
+            fig.update_traces(colorbar=dict(title=dict(text="명", side="top"), thickness=14, len=0.8))
+        fig.update_traces(xgap=1, ygap=1)
         fig.update_yaxes(autorange="reversed")
 
-        return [self._apply_theme(fig)]
+        label = "혼잡도" if self.metric == "congestion_score" else "평균 인구"
+        return [self._apply_theme(fig, height=440, title=f"{place.name} · 요일 × 시간 {label}")]
 
     def _hover_text(self, place: Place) -> List[List[str]]:
         """7×24 칸마다 마우스를 올렸을 때 보일 글자 (예: "월 18시 / 혼잡도 3.5 / 인구 38,000~42,000명")"""
@@ -70,6 +74,6 @@ class CongestionHeatmapChart(BaseChart):
     def _colorscale(self, metric: str) -> list:
         """congestion_score면 CONGESTION_COLORS 4단계, avg_population이면 연한색→진한색 연속 색"""
         if metric == "congestion_score":
-            # 점수 1~4를 색 척도 위치 0~1에 맞춤 (1→0, 2→1/3, 3→2/3, 4→1)
-            return [[i / 3, CONGESTION_COLORS[level]] for i, level in enumerate(CONGESTION_ORDER)]
-        return [[0, "#EAF2FB"], [1, "#08306B"]]
+            # 점수 1~4를 색 척도 위치 0~1에 맞춤 (1→0, 2→1/3, 3→2/3, 4→1). 지도와 같은 공통 색
+            return CONGESTION_SCALE
+        return [[0, "#EEF5F8"], [1, PRIMARY]]

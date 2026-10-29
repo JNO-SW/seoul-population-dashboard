@@ -26,6 +26,9 @@ class DashboardApp:
         page = st.sidebar.radio("페이지", list(self.charts))
         category = st.sidebar.selectbox("장소 분류", self.repo.categories())
         self.place = self.repo.get(st.sidebar.selectbox("장소", self.repo.names(category)))
+        start, end = self.repo.period()
+        st.sidebar.caption(f"데이터: {start:%Y.%m.%d} ~ {end:%Y.%m.%d} · 장소 {len(self.repo.all())}곳\n\n"
+                           "출처: 서울 열린데이터광장 실시간 인구데이터·도시데이터")
         return page
 
     def render_page(self, name: str) -> None:
@@ -52,9 +55,11 @@ def get_repo() -> PlaceRepository:
     return load_repository()
 
 
-@st.cache_resource
 def get_charts() -> Dict[str, BaseChart]:
-    return {name: cls() for name, cls in PAGES.items()}
+    """차트 객체는 접속자마다 따로 만든다 (고른 시각·분류 같은 값이 다른 접속자와 섞이지 않게)"""
+    if "charts" not in st.session_state:
+        st.session_state.charts = {name: cls() for name, cls in PAGES.items()}
+    return st.session_state.charts
 
 
 DashboardApp(get_repo(), get_charts()).run()

@@ -11,11 +11,11 @@ import streamlit as st
 
 from ..models import Place
 from ..repository import PlaceRepository
-from .base import BaseChart
+from .base import PRIMARY, PRIMARY_LIGHT, BaseChart
 
 ALL_CATEGORIES = "전체"
 # (표 열 이름, 범례 이름, 색)
-AGE_BARS = [("age_10", "10대", "#7FB3E6"), ("age_20", "20대", "#3C7DD9"), ("age_30", "30대", "#1B3F8F")]
+AGE_BARS = [("age_10", "10대", PRIMARY_LIGHT), ("age_20", "20대", "#3D8DB0"), ("age_30", "30대", PRIMARY)]
 
 
 class YouthChart(BaseChart):
@@ -44,10 +44,11 @@ class YouthChart(BaseChart):
                 y=top["name"], x=top[col], name=label, orientation="h",
                 marker_color=color, hovertemplate=f"%{{y}}<br>{label}: %{{x:.1f}}%<extra></extra>",
             ))
-        fig.update_layout(barmode="stack")
+        fig.update_layout(barmode="stack", legend=dict(orientation="h", y=1.0, yanchor="bottom", x=1, xanchor="right", traceorder="normal"))
         fig.update_xaxes(title="10~30대 비율 합 (%)")
         fig.update_yaxes(autorange="reversed")   # 비율이 가장 높은 장소를 맨 위로
-        return [self._apply_theme(fig, height=max(420, 40 * len(top) + 120))]
+        scope = self.category or "전체 장소"
+        return [self._apply_theme(fig, height=max(420, 40 * len(top) + 120), title=f"{self.title} · {scope} 상위 {len(top)}곳")]
 
     def _top_n(self, df: pd.DataFrame, n: int) -> pd.DataFrame:
         return df.sort_values("youth_rate", ascending=False).head(n).reset_index(drop=True)

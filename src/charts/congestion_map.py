@@ -19,14 +19,14 @@ import streamlit as st
 
 from ..models import Place
 from ..repository import DATA_DIR, PlaceRepository
-from .base import CONGESTION_ORDER, BaseChart
+from .base import CONGESTION_COLORBAR, CONGESTION_ORDER, CONGESTION_SCALE, BaseChart
 
 DISTRICT_GEOJSON = DATA_DIR / "seoul_districts.geojson"
 PLACE_GEOJSON = DATA_DIR / "seoul_places.geojson"
 
-# 혼잡할수록 진하게 (점수 1~4 고정)
-COLOR_SCALE = [[0.0, "#FFF5E6"], [0.33, "#FDC07A"], [0.67, "#F0703C"], [1.0, "#B3241E"]]
-COLORBAR = dict(title="혼잡도", tickvals=[1, 2, 3, 4], ticktext=CONGESTION_ORDER)
+# 혼잡도 색은 히트맵과 같은 공통 색 사용 (점수 1~4 고정)
+COLOR_SCALE = CONGESTION_SCALE
+COLORBAR = CONGESTION_COLORBAR
 NO_DATA_COLOR = "#E5E5E5"
 BASE_COLOR = "#F4F4F4"
 UNITS = ["장소", "자치구"]
@@ -57,8 +57,7 @@ class CongestionMapChart(BaseChart):
         else:
             self._add_place_traces(fig, repo, place)
         fig.update_geos(fitbounds="geojson", visible=False, projection_type="mercator")
-        fig = self._apply_theme(fig, height=760)
-        fig.update_layout(title=f"{self.title} · {self.unit} 단위 ({self.hour}시 기준)")
+        fig = self._apply_theme(fig, height=760, title=f"{self.title} · {self.unit} 단위 ({self.hour}시 기준)")
         return [fig]
 
     def summary_cards(self, place: Optional[Place]) -> Dict[str, str]:
