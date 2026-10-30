@@ -4,14 +4,53 @@
 
 ## 실행 방법
 
+### 준비물
+- [Python 3.10 이상](https://www.python.org/downloads/) (설치할 때 "Add python.exe to PATH" 체크)
+- [Git](https://git-scm.com/downloads) — 실제 수집 데이터를 받을 때 필요
+- 편집기는 VS Code 권장
+
+### 1. 저장소 받기
+
 ```bash
-pip install -r requirements.txt
-streamlit run app.py
+git clone https://github.com/JNO-SW/seoul-population-dashboard.git
+cd seoul-population-dashboard
 ```
 
-브라우저에서 `http://localhost:8501` 이 열립니다.
+Fork·GitHub Desktop을 쓰면 Clone 후 VS Code에서 `파일 > 폴더 열기`로 이 폴더를 열고 `터미널 > 새 터미널`을 엽니다.
 
-> `data/raw`에 실제 수집 데이터가 없으면 `data/sample`의 **가짜 데이터**(장소 8곳 × 2주)로 실행됩니다.
+### 2. 패키지 설치 (처음 한 번)
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. 실제 수집 데이터 받기 (선택)
+
+```bash
+git fetch origin data
+git checkout origin/data -- data/raw data/raw_city
+git restore --staged data
+```
+
+- 이 단계를 건너뛰면 `data/sample`의 **가짜 데이터**(장소 8곳 × 2주)로 실행됩니다.
+- 받은 데이터는 `.gitignore`에 있어 커밋되지 않습니다. 최신 데이터가 필요할 때마다 다시 실행하면 됩니다.
+
+### 4. 실행
+
+```bash
+python -m streamlit run app.py
+```
+
+브라우저에서 `http://localhost:8501` 이 열립니다. 종료는 터미널에서 `Ctrl + C`.
+
+### 자주 나는 오류
+
+| 증상 | 해결 |
+|---|---|
+| `git` 용어가 인식되지 않습니다 | Git 설치 후 VS Code를 완전히 껐다 켜기. 그래도 안 되면 터미널에 `$env:Path += ";C:\Program Files\Git\cmd"` 입력 후 다시 실행 |
+| `streamlit` 용어가 인식되지 않습니다 | `streamlit run` 대신 `python -m streamlit run app.py` 사용 |
+| `Import openpyxl failed` | `pip install -r requirements.txt` 다시 실행 |
+| 지도가 비어 보임 | 지도 배경 파일을 인터넷에서 받아오므로 인터넷 연결 확인 |
 
 ## 폴더 구조
 
