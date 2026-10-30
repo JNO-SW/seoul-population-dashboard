@@ -23,7 +23,8 @@ CONGESTION_COLORBAR = dict(tickvals=[1, 2, 3, 4], ticktext=CONGESTION_ORDER, thi
 PRIMARY = "#0A6B91"        # 기본 (진한 파랑)
 PRIMARY_LIGHT = "#8FC1D6"  # 기본 (연한 파랑)
 NEUTRAL = "#8C8C8C"        # 보조 (회색)
-GRID = "#E6EBEF"           # 격자선
+GRID = "rgba(128, 128, 128, 0.25)"   # 격자선 (반투명이라 라이트·다크 모드 둘 다 보임)
+CLEAR = "rgba(0, 0, 0, 0)"            # 투명 배경
 # 장소 분류 색 (분류로 색을 나누는 모든 차트 공통)
 CATEGORY_COLORS = {"관광특구": "#0A6B91", "고궁·문화유산": "#8E6BB8", "인구밀집지역": "#D64545",
                    "발달상권": "#EE8A2E", "공원": "#2E9E5B", "미분류": "#8C8C8C"}
@@ -46,14 +47,16 @@ class BaseChart(ABC):
 
     def _apply_theme(self, fig: go.Figure, height: int = 420, title: Optional[str] = None) -> go.Figure:
         """모든 그래프 공통 스타일. render()에서 돌려주기 전에 꼭 거친다.
-        title을 주면 그 제목을, 없으면 차트 제목(self.title)을 쓴다 (그래프가 여러 개인 페이지용)"""
+        title을 주면 그 제목을, 없으면 차트 제목(self.title)을 쓴다 (그래프가 여러 개인 페이지용)
+        배경은 투명, 글자색은 지정하지 않음 → Streamlit 라이트·다크 테마 색을 그대로 따름"""
         fig.update_layout(
-            title=dict(text=title or self.title, font=dict(size=17, color="#1F2A33"), x=0, xanchor="left"),
+            title=dict(text=title or self.title, font=dict(size=17), x=0, xanchor="left"),
             height=height, margin=dict(l=20, r=20, t=60, b=20),
-            font=dict(family="Noto Sans KR, sans-serif", size=13, color="#33414D"),
-            paper_bgcolor="white", plot_bgcolor="white",
+            font=dict(family="Noto Sans KR, sans-serif", size=13),
+            paper_bgcolor=CLEAR, plot_bgcolor=CLEAR,
             hoverlabel=dict(font=dict(family="Noto Sans KR, sans-serif")),
         )
         fig.update_xaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor=GRID)
         fig.update_yaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor=GRID)
+        fig.update_geos(bgcolor=CLEAR)   # 지도 배경도 투명
         return fig

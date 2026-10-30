@@ -27,8 +27,10 @@ PLACE_GEOJSON = DATA_DIR / "seoul_places.geojson"
 # 혼잡도 색은 히트맵과 같은 공통 색 사용 (점수 1~4 고정)
 COLOR_SCALE = CONGESTION_SCALE
 COLORBAR = CONGESTION_COLORBAR
-NO_DATA_COLOR = "#E5E5E5"
-BASE_COLOR = "#F4F4F4"
+NO_DATA_COLOR = "rgba(150, 150, 150, 0.40)"   # 반투명 회색 (라이트·다크 모드 공통)
+BASE_COLOR = "rgba(150, 150, 150, 0.15)"
+BORDER_COLOR = "rgba(150, 150, 150, 0.70)"
+SELECTED_COLOR = "#1E88E5"                     # 선택한 장소 테두리
 UNITS = ["장소", "자치구"]
 
 
@@ -118,7 +120,7 @@ class CongestionMapChart(BaseChart):
             geojson=geo, featureidkey="properties.name",
             locations=df["district"], z=df["avg_congestion"], zmin=1, zmax=4,
             colorscale=COLOR_SCALE, colorbar=COLORBAR,
-            marker_line_color="white", marker_line_width=1,
+            marker_line_color=BORDER_COLOR, marker_line_width=1,
             customdata=df[["total_population"]].assign(level=df["avg_congestion"].map(self._level)),
             hovertemplate=("<b>%{location}</b><br>평균 혼잡도 %{z:.2f} (%{customdata[1]})"
                            "<br>평균 인구 합 %{customdata[0]:,.0f}명<extra></extra>"),
@@ -147,7 +149,7 @@ class CongestionMapChart(BaseChart):
                 geojson=geo, featureidkey="properties.AREA_CD",
                 locations=[place.code], z=[0], showscale=False, hoverinfo="skip",
                 colorscale=[[0, "rgba(0,0,0,0)"], [1, "rgba(0,0,0,0)"]],
-                marker_line_color="#1F3A93", marker_line_width=3,
+                marker_line_color=SELECTED_COLOR, marker_line_width=3,
             ))
 
     def _base_districts(self, geo: dict, color: str, hover: Optional[str]) -> go.Choropleth:
@@ -155,7 +157,7 @@ class CongestionMapChart(BaseChart):
         return go.Choropleth(
             geojson=geo, featureidkey="properties.name", locations=names, z=[0] * len(names),
             colorscale=[[0, color], [1, color]], showscale=False,
-            marker_line_color="white" if hover else "#BBBBBB", marker_line_width=1,
+            marker_line_color=BORDER_COLOR, marker_line_width=1,
             hovertemplate=f"<b>%{{location}}</b><br>{hover}<extra></extra>" if hover else "%{location}<extra></extra>",
         )
 
